@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/vi/thumb/2/29/Logo-HCMIU.svg/900px-Logo-HCMIU.svg.png?20230314065952">
+    <title>Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120vh;
+            background-color: #f0f0f0;
+            box-shadow: #4CAF50;
+        }
+
+        .container {
+            width: 600px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+        }
+
+        h2 {
+            text-align: left;
+            font-size: 50px;
+            color: cadetblue;
+            text-shadow: 2px 2px 6px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            
+        }
+        
+
+        input[type="text"], input[type="email"], input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .radio-group, .checkbox-group {
+            margin: 10px 0;
+        }
+
+        .radio-group label, .checkbox-group label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .submit-btn {
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/vi/thumb/2/29/Logo-HCMIU.svg/900px-Logo-HCMIU.svg.png?20230314065952" alt="logo iu"width=150px height="150px">
+        <h2>Survey</h2>
+        <form action="result.html" method="get">
+            <label for="first-name"><strong>First Name</strong></label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <label for="last-name"><strong>Last Name</strong></label>
+            <input type="text" id="last-name" name="last-name" required>
+
+            <label for="email"><strong>Email</strong></label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="dob"><strong>Date Of Birth</strong></label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label style="color: cadetblue;"><strong>How did you hear about us?</strong></label >
+            <div class="radio-group">
+                <label><input type="radio" name="hear-about" value="Search Engine" required> Search engine</label>
+                <label><input type="radio" name="hear-about" value="Word of Mouth"> Word of mouth</label>
+                <label><input type="radio" name="hear-about" value="Social Media"> Social Media</label>
+                <label><input type="radio" name="hear-about" value="Other"> Other</label>
+            </div>
+
+            <label style="color: cadetblue;"><strong>Would you like to receive announcements about new CDs and special offers?</strong></label>
+            <div class="checkbox-group">
+                <label><input type="checkbox"name="receive-annoucements"> Yes, I'd like that.</label>
+                <label><input type="checkbox" name="receive-announcements"> Yes, please send me email announcements.</label>
+            </div>
+
+            <label for="contact-method">Please contact me by:</label>
+            <select id="contact-method" name="contact-method">
+                <option value="Email or postal mail">Email or postal mail</option>
+                <option value="Email only">Email only</option>
+                <option value="Postal mail only">Postal mail only</option>
+            </select>
+
+            <div class="submit-btn">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
